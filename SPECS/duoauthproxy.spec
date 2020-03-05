@@ -11,6 +11,7 @@ Source0: https://dl.duosecurity.com/duoauthproxy-latest-src.tgz
 BuildRequires: gcc make python2-devel libffi-devel perl zlib-devel
 Requires: gcc make python2-devel libffi-devel perl zlib-devel
 
+%global debug_package %{nil}
 
 %description
 Duo authentication for Palo Alto GlobalProtect supports push, phone call, or passcode authentication for GlobalProtect desktop and mobile client connections using RADIUS. This configuration does not feature the interactive Duo Prompt for web-based logins. After submitting primary username and password, users automatically receive a login request via Duo Push notification to a mobile device or as a phone call.
