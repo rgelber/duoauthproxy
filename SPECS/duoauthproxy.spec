@@ -45,6 +45,12 @@ for i in $LIST; do
     sed 's|#!/usr/bin/python|#!/usr/bin/python2|g' -i "${i}"
 done
 
+LIST=$(grep -RI '#! /usr/bin/env python' %{buildroot} | awk -F':' '{print $1}')
+for i in $LIST; do 
+    sed 's|#! /usr/bin/env python|#!/usr/bin/env python2|g' -i "${i}"
+done
+
+
 
 %clean
 echo "NOOP"
